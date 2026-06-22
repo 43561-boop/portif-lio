@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davi Noriyasu Kusumi — Dev em Formação</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Cursor personalizado -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Canvas de partículas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ======== NAVEGAÇÃO ======== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>DK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#jornada">Jornada</a></li>
+        <li><a href="#habilidades">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#conquistas">Conquistas</a></li>
+        <li><a href="#terminal">Terminal</a></li>
+        <li><a href="#contato" class="nav-cta">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">
+        <span class="hero-line"></span>
+        Olá, eu sou
+      </p>
+      <h1 class="hero-name">
+        Davi<br />
+        <span class="name-highlight">Noriyasu</span><br />
+        Kusumi<span class="cursor-blink">_</span>
+      </h1>
+      <p class="hero-role">Estudante de Técnico em Informática</p>
+      <p class="hero-typing">
+        <span class="typing-prefix">&gt;&nbsp;</span>
+        <span id="typing-text"></span><span class="typing-cursor">|</span>
+      </p>
+      <div class="hero-buttons">
+        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+        <a href="https://github.com/43561-boop" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SOBRE ======== -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">// sobre</span>
+        <h2>Quem sou eu</h2>
+      </div>
+      <div class="sobre-grid fade-in">
+        <div class="sobre-card glass">
+          <div class="sobre-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">DK</div>
+          </div>
+          <div class="sobre-info">
+            <div class="info-row">
+              <span class="info-label">Idade</span>
+              <span class="info-value">16 anos</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Cidade</span>
+              <span class="info-value">Campinas — SP</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Formação</span>
+              <span class="info-value">2º EM + Técnico em Informática</span>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-text">
+          <p>
+            Sou estudante do 2º ano do Ensino Médio e curso Técnico em Informática. Tenho grande interesse por programação, especialmente <strong>Python</strong> e <strong>desenvolvimento Front-end</strong>.
+          </p>
+          <p>
+            Gosto de transformar ideias em projetos e estou constantemente buscando aprender novas tecnologias para evoluir como desenvolvedor.
+          </p>
+          <p class="sobre-objetivo">
+            <span class="obj-label">objetivo &rarr;</span>
+            Desenvolver cada vez mais minhas habilidades, criar projetos relevantes e conquistar oportunidades na área de tecnologia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== JORNADA ======== -->
+  <section id="jornada" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">// jornada</span>
+        <h2>Linha do tempo</h2>
+      </div>
+      <div class="timeline fade-in">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-card glass">
+            <h3>Início da jornada</h3>
+            <p>Início do curso Técnico em Informática. Primeiro contato com lógica de programação e bases da computação.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-year">2025</div>
+          <div class="timeline-card glass">
+            <h3>Aprofundamento</h3>
+            <p>Mergulho em Python e desenvolvimento Front-end. Primeiros projetos práticos e consolidação dos fundamentos.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-year">2026</div>
+          <div class="timeline-card glass current">
+            <span class="timeline-badge">agora</span>
+            <h3>Construindo projetos</h3>
+            <p>Desenvolvimento de projetos próprios, publicação no GitHub e evolução constante como desenvolvedor.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item future">
+          <div class="timeline-dot future-dot"></div>
+          <div class="timeline-year">Futuro</div>
+          <div class="timeline-card glass future-card">
+            <h3>Experiência profissional</h3>
+            <p>Estágio e primeiras experiências reais no mercado de tecnologia.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== HABILIDADES ======== -->
+  <section id="habilidades" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">// habilidades</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-grid fade-in">
+
+        <div class="skill-card glass">
+          <div class="skill-icon skill-python">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.007 2.752h5.814v.826H3.9S0 5.789 0 11.969c0 6.18 3.403 5.963 3.403 5.963h2.031v-2.867s-.109-3.402 3.35-3.402h5.763s3.24.052 3.24-3.13V3.19S18.28 0 11.914 0zm-3.2 1.848a1.044 1.044 0 1 1 0 2.087 1.044 1.044 0 0 1 0-2.087zM12.086 24c6.096 0 5.716-2.656 5.716-2.656l-.007-2.752h-5.814v-.826h8.12S24 18.211 24 12.031c0-6.18-3.403-5.963-3.403-5.963h-2.031v2.867s.109 3.402-3.35 3.402h-5.762s-3.24-.052-3.24 3.13v5.313S5.72 24 12.086 24zm3.199-1.848a1.044 1.044 0 1 1 0-2.087 1.044 1.044 0 0 1 0 2.087z"/></svg>
+          </div>
+          <h3>Python</h3>
+          <p>Scripts, automações e lógica de programação</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:60%"></div></div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-icon skill-html">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg>
+          </div>
+          <h3>HTML</h3>
+          <p>Estrutura semântica e acessível</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:70%"></div></div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-icon skill-css">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/></svg>
+          </div>
+          <h3>CSS</h3>
+          <p>Estilização, layouts e animações</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:65%"></div></div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-icon skill-js">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg>
+          </div>
+          <h3>JavaScript</h3>
+          <p>Interatividade e manipulação do DOM</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:45%"></div></div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-icon skill-git">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.604-.406-.545-.545-.676-1.342-.396-2.009L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"/></svg>
+          </div>
+          <h3>Git & GitHub</h3>
+          <p>Versionamento e colaboração</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:55%"></div></div>
+        </div>
+
+        <div class="skill-card glass">
+          <div class="skill-icon skill-logic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Lógica</h3>
+          <p>Resolução de problemas e algoritmos</p>
+          <div class="skill-bar"><div class="skill-fill" style="--pct:72%"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROJETOS ======== -->
+  <section id="projetos" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">// projetos</span>
+        <h2>O que estou construindo</h2>
+      </div>
+      <div class="projects-grid fade-in">
+
+        <!-- Projeto: Gladiatus -->
+        <div class="project-card glass featured">
+          <div class="project-header">
+            <div class="project-status">
+              <span class="status-dot"></span>
+              ativo
+            </div>
+            <div class="project-tech-badge">Python</div>
+          </div>
+          <h3 class="project-name">Gladiatus</h3>
+          <p class="project-desc">
+            Projeto desenvolvido para praticar programação, organização de código e resolução de problemas reais. Uma forma de transformar aprendizado em produto.
+          </p>
+          <div class="project-footer">
+            <a href="https://github.com/43561-boop/Gladiatus" target="_blank" rel="noopener" class="btn btn-outline-sm">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              Ver no GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Card de próximo projeto -->
+        <div class="project-card glass project-placeholder">
+          <div class="placeholder-inner">
+            <div class="placeholder-icon">+</div>
+            <h3>Próximo projeto</h3>
+            <p>Em desenvolvimento... Algo novo está por vir.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONQUISTAS ======== -->
+  <section id="conquistas" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">// conquistas</span>
+        <h2>Achievements</h2>
+      </div>
+      <div class="achievements-grid fade-in">
+
+        <div class="achievement unlocked glass">
+          <div class="ach-icon">🚀</div>
+          <div class="ach-info">
+            <h4>Primeiro projeto publicado</h4>
+            <p>Gladiatus no GitHub</p>
+          </div>
+          <div class="ach-badge unlocked-badge">✓</div>
+        </div>
+
+        <div class="achievement unlocked glass">
+          <div class="ach-icon">📚</div>
+          <div class="ach-info">
+            <h4>Estudante de Técnico em Informática</h4>
+            <p>Curso técnico em andamento</p>
+          </div>
+          <div class="ach-badge unlocked-badge">✓</div>
+        </div>
+
+        <div class="achievement unlocked glass">
+          <div class="ach-icon">🐍</div>
+          <div class="ach-info">
+            <h4>Aprendendo Python</h4>
+            <p>Mergulhando na linguagem</p>
+          </div>
+          <div class="ach-badge unlocked-badge">✓</div>
+        </div>
+
+        <div class="achievement locked glass">
+          <div class="ach-icon">💼</div>
+          <div class="ach-info">
+            <h4>Primeiro estágio</h4>
+            <p>Experiência profissional real</p>
+          </div>
+          <div class="ach-badge locked-badge">🔒</div>
+        </div>
+
+        <div class="achievement locked glass">
+          <div class="ach-icon">⚡</div>
+          <div class="ach-info">
+            <h4>Primeiro projeto profissional</h4>
+            <p>Contribuição no mercado</p>
+          </div>
+          <div class="ach-badge locked-badge">🔒</div>
+        </div>
+
+        <div class="achievement locked glass">
+          <div class="ach-icon">🌐</div>
+          <div class="ach-info">
+            <h4>Desenvolvedor Full Stack</h4>
+            <p>Domínio completo do stack</p>
+          </div>
+          <div class="ach-badge locked-badge">🔒</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== TERMINAL ======== -->
+  <section id="terminal" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">// terminal</span>
+        <h2>Interface interativa</h2>
+      </div>
+      <div class="terminal-wrapper fade-in">
+        <div class="terminal glass">
+          <div class="terminal-titlebar">
+            <div class="tb-dots">
+              <span class="tb-dot red"></span>
+              <span class="tb-dot yellow"></span>
+              <span class="tb-dot green"></span>
+            </div>
+            <span class="tb-title">davi@portfolio ~ bash</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="term-welcome">
+              <span class="term-green">Bem-vindo ao terminal interativo de Davi Kusumi</span><br/>
+              <span class="term-dim">Digite um comando abaixo ou clique nas sugestões</span><br/><br/>
+            </div>
+            <div id="terminal-output"></div>
+            <div class="term-input-line">
+              <span class="term-prompt">davi@portfolio:~$&nbsp;</span>
+              <input type="text" id="term-input" class="term-input" autocomplete="off" spellcheck="false" placeholder="whoami" />
+            </div>
+          </div>
+          <div class="terminal-hints">
+            <button class="hint-btn" data-cmd="whoami">whoami</button>
+            <button class="hint-btn" data-cmd="skills">skills</button>
+            <button class="hint-btn" data-cmd="goals">goals</button>
+            <button class="hint-btn" data-cmd="projects">projects</button>
+            <button class="hint-btn" data-cmd="contact">contact</button>
+            <button class="hint-btn" data-cmd="help">help</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTATO ======== -->
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">// contato</span>
+        <h2>Vamos conversar</h2>
+      </div>
+      <div class="contact-grid fade-in">
+
+        <a href="https://github.com/43561-boop" target="_blank" rel="noopener" class="contact-card glass">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="contact-info">
+            <h4>GitHub</h4>
+            <p>@43561-boop</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <a href="mailto:seuemail@email.com" class="contact-card glass">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="contact-info">
+            <h4>Email</h4>
+            <p>seuemail@email.com</p>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+
+        <div class="contact-card glass contact-soon">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-info">
+            <h4>LinkedIn</h4>
+            <p>Em breve</p>
+          </div>
+          <span class="contact-tag">soon</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer id="footer">
+    <div class="container">
+      <p class="footer-text">
+        <span class="logo-bracket">&lt;</span>DK<span class="logo-bracket">/&gt;</span>
+        &nbsp;— Feito com 💜 e muito café · Campinas, SP · 2026
+      </p>
+      <p class="footer-code">// continue construindo. nunca pare de aprender.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
